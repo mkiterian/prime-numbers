@@ -20,6 +20,6 @@ def generate_prime_numbers(number):
 
 			return primes
 		else:
-			return 'N should be a positive integer'
+			return 'number should be a positive integer greater than 0'
 	except TypeError:
 		raise TypeError
