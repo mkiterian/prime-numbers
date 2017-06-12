@@ -1,3 +1,4 @@
+
 def generate_prime_numbers(number):
 	#create empty lists for prime numbers and numbers that have been tested
 	primes = []
@@ -30,5 +31,3 @@ def generate_prime_numbers(number):
 			return 'N should be a positive integer'
 	except TypeError:
 		raise TypeError
-            
-print(generate_prime_numbers(100000))
