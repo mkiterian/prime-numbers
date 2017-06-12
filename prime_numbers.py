@@ -1,34 +1,25 @@
+#tests if passed-in number is a prime number
+def is_prime(num):
+	if num < 2:
+		return False
 
+	for i in range(2, num):
+		if num % i == 0:
+			return False
+	return True
+
+#takes in a number and returns a list of prime numbers for zero to the number
 def generate_prime_numbers(number):
-	#create empty lists for prime numbers and numbers that have been tested
 	primes = []
-	tested = [1]
-
 	try:
-		if isinstance(number, int):
-			#for every num from 1 to limit
-			if number > 0:
-				for num in range(1, number+1):
+		isinstance(number, int)
+		if number > 0:			
+			for num in range(2, number+1):
+				if is_prime(num):
+					primes.append(num)
 
-					#create a list to hold factors of the num
-					factors = []
-
-					#check if num is divisible by x in the tested list
-					for i in range(len(tested)):
-						#if num is divisible by x, add x to the factors list 
-						if num % tested[i] == 0:
-							factors.append(tested[i])
-
-					#add num to it's factors list
-					factors.append(num)
-					set_factors = set(factors)
-					tested.append(num)
-
-					if len(set_factors) == 2:
-						primes.append(num)
-
-				return primes
-			else:
-				return 'N should be a positive integer'
+			return primes
+		else:
+			return 'N should be a positive integer'
 	except TypeError:
 		raise TypeError
