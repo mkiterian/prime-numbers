@@ -24,6 +24,10 @@ class PrimeNumberTest(unittest.TestCase):
 		expected = 5
 		self.assertEqual(actual, expected, msg='Number of returned items is not as expected')
 
+	def test_if_number_is_a_positive_integer(self):
+		#test if number is a positive integer
+		self.assertEqual(generate_prime_numbers(-10), 'N should be a positive integer', msg='Number Should be a positive integer')
+
 
 if __name__ == '__main__':
 	unittest.main()
