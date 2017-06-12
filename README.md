@@ -11,5 +11,5 @@ Usage:
 5. the returned value should be the list of prime numbers from 0 to n
 
 
-* the time complexity of this function is linearly related to size on input;
+* the time complexity of this function is linearly related to size of the input;
   a large number will take longer to compute
